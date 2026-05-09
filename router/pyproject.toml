@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "router"
+version = "0.1.0"
+description = "STT watcher + router package using gpt-4o-mini"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.0.0",
+]
+
+[project.scripts]
+router = "router.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
